@@ -1,0 +1,12 @@
+console.log("Hello world");
+var name = "Victor Rocha";
+document.querySelector('.titulo').textContent = name;
+var paciente = document.querySelector("#primeiro-paciente");
+var tdPeso = paciente.querySelector(".info-peso");
+var tdAltura = paciente.querySelector(".info-altura");
+var tdImc = paciente.querySelector(".info-imc");
+var altura = Number(tdAltura.textContent);
+var peso = Number(tdPeso.textContent);
+var imc = peso / (altura * altura);
+tdImc.textContent = imc;
+console.log(imc);
