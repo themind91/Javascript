@@ -1,27 +1,24 @@
-var paciente = createPaciente(document.querySelector("#primeiro-paciente"));
+calculaIMC(document.querySelectorAll(".paciente"));
 var mensagem = "";
-paciente.imc.textContent = calculaIMC(paciente.peso,paciente.altura);
+function calculaIMC(pacientes){
+  var imc =0;
+  let isValid = "";
+  for(var i=0; i<pacientes.length; i++){
 
+     isValid = validarCampos(pacientes[i].querySelector('.info-peso').textContent,pacientes[i].querySelector('.info-altura').textContent);
+    if(isValid == undefined || isValid.length == 0){
+      imc = pacientes[i].querySelector('.info-peso').textContent/(pacientes[i].querySelector('.info-altura').textContent*pacientes[i].querySelector('.info-altura').textContent);
+      pacientes[i].querySelector('.info-imc').textContent = imc;
+    }else{
+      pacientes[i].querySelector('.info-imc').textContent = mensagem;
+    }
 
-
-function calculaIMC(peso,altura){
-
-  if(validarCampos(peso,altura).length == 0){
-      return peso / (altura*altura);
-  }else{
-
-    return mensagem;
   }
-}
-function createPaciente(paciente){
-  var novoPaciente = {peso:Number(paciente.querySelector(".info-peso").textContent)
-                     ,altura: Number(paciente.querySelector(".info-altura").textContent)
-                     ,imc:paciente.querySelector(".info-imc")}
 
-  return novoPaciente;
 }
 
 function validarCampos(peso,altura){
+  mensagem = "";
   if (peso <= 0 || peso > 200){
       mensagem = "peso invalido";
       return mensagem;
