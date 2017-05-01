@@ -32,10 +32,3 @@ function validarCampos(pacientes){
   }
 
 }
-
-var botaoAdicionar = document.querySelector('#adicionar-paciente');
-
-botaoAdicionar.addEventListener('click',function(e){
-  e.preventDefault();
-  alert('you have been traced');
-})
