@@ -7,7 +7,7 @@ botaoAdicionar.addEventListener("click", function(event) {
     var paciente = obtemPacienteDoFormulario(form);
 
     var pacienteTr = montaTr(paciente);
-     var erro = validaPaciente(paciente);
+     var erros = validaPaciente(paciente);
      if (erros.length > 0) {
        exibeMensagensDeErro(erros);
        return;
