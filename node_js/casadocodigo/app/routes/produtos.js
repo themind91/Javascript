@@ -3,7 +3,7 @@ module.exports = function(app){
 var pg = require('pg');
 var PGUSER = 'postgres'
 var PGDATABASE = 'casa_do_codigo'
-var password = 'pradochaves157@';
+var password = '**********';
 
 var config = {
     user: PGUSER, // name of the user account
