@@ -1,0 +1,15 @@
+{
+  "name": "crawler_challenge",
+  "version": "1.0.0",
+  "description": "challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor Rocha",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "telegraf": "^3.17.2"
+  }
+}
