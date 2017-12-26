@@ -1,5 +1,5 @@
 const Telegraf = require('telegraf');
-const TOKEN="473273944:AAFrJNZIrFyrpkrhmjM7m4OSeRvNOdYtLFY";
+const TOKEN="?";
 const app = new Telegraf(TOKEN);
 const axios = require('axios');
 
